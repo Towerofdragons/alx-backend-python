@@ -16,8 +16,8 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ["a"], {"b": 2}),
         ({"a": {"b": 2}}, ["a", "b"], 2)
     ])
-    def test_correct_output(self, map: Dict[Any, Any], 
-                            path: List[str], 
+    def test_correct_output(self, map: Dict[Any, Any],
+                            path: List[str],
                             expected_result: Any) -> None:
         self.assertEqual(access_nested_map(map, path), expected_result)
 
